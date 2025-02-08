@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Ecommerce</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="../static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../static/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid fixed-top">
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Ecommerce</h1></a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+
+        
+
+        <!-- Login Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <section class="container">
+                            <header>Registration Form</header>
+                            <form method="POST" class="form">
+                                {% csrf_token %}
+                              <!--Email section-->
+                              <div class="input-box">
+                                <label>Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter email address" required />
+                              </div>
+                               <!--Username section-->
+                               <div class="input-box">
+                                <label>Username</label>
+                                <input type="text" id="username" name="username" placeholder="Enter Username" required />
+                              </div>  
+                              
+                               <!--PAssword1 section-->
+                               <div class="column">
+                                <div class="input-box">
+                                  <label>Password</label>
+                                  <input type="password" id="password1" name="password1" placeholder="Enter password" required />
+                                </div>
+                                <!--PAssword2 section-->
+                                <div class="input-box">
+                                  <label>Re-Enter</label>
+                                  <input type="password" id="password2" name="password2" placeholder="Re-Enter password" required />
+                                </div>
+                              </div>
+                              <p>Password must contain an uppercase,lowercase,numbers and special symbol</p>
+                              <!--Button section-->
+                              <div class="column">
+                                <button type="reset" id="btn2" onclick="alert('Reseted!')">Reset</button>
+                                <button type="submit" value="register">Submit</button>
+                              </div>
+                            </form>
+                          </section><br>
+                          <a class="btn border-secondary rounded-pill py-3 px-5" href="{% url 'login' %}">Go Back To Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Login End -->
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../static/js/main.js"></script>
+    </body>
+
+</html>
